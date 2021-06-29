@@ -17,8 +17,8 @@ export const GlobalStyle = createGlobalStyle`
 
 * {
     margin: 0;
-    pading: 0;
-    box-sizing: border-box:
+    padding: 0;
+    box-sizing: border-box;
 }
 
 // Standard desktop font size = 16px
