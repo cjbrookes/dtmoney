@@ -1,7 +1,7 @@
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
-:root {
+ :root {
     --background: #f0f2f5;
     --red: #E52E4D;
     --green: #33CC95;
@@ -14,18 +14,18 @@ export const GlobalStyle = createGlobalStyle`
 
     --background: #F0F2F5;
     --shape: #FFFFFF;
-}
+ }
 
-* {
+ * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+    }
 
-// Standard desktop font size = 16px
-// reduce to 15px for smaller screen size:
+  // Standard desktop font size = 16px
+  // reduce to 15px for smaller screen size:
 
-html {
+  html {
     @media (max-width: 1080px) {
         font-size: 93.75%;
     }
@@ -60,4 +60,27 @@ button {
     opacity: 0.6;
     cursor: not-allowed;
 }
+
+ .react-modal-overlay {
+    background: rgba(0, 0, 0, 0.5);
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0; 
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ } 
+
+  .react-modal-content {
+    width: 100%;
+    max-width: 576px;  //if > 576 width will stop growing, if < 576 will be the size of the screen (100%)
+    background: var(--background);
+    padding: 3rem;
+    position: relative;
+    border-radius: 0.24rem;
+  }
 `
